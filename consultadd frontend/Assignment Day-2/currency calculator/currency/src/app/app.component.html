@@ -1,0 +1,29 @@
+<body style="text-align: center;">
+  <h1>Consultadd frontend assignment 2</h1>
+  <h2>Simple currency converter</h2>
+
+  <!-- <input type="text" [(ngModel)]="curr">
+  <h3>{{curr}}</h3> -->
+
+  <input type="text" [(ngModel)]="curr">
+  
+  <select name="curr_select" id="curr_select" (change)="func1()"
+  [(ngModel)]="type">
+    <option value="USD"> US Dolar</option>
+    <option value="ERO"> Euro</option>
+    <option value="AUD"> Australian Dolar</option>
+    <option value="CAD"> Canadian Dolar</option>
+    <option value="JPY"> Yen</option>
+  </select>
+  <p>ans via same component</p>
+  <h1>{{ans}}</h1>
+  <p>ans via child component</p>
+
+  <app-usd *ngIf="type === 'USD'" [APP_curr] = "curr"></app-usd>
+  <app-usd *ngIf="type === 'ERO'" [APP_curr] = "curr"></app-usd>
+  <app-usd *ngIf="type === 'AUD'" [APP_curr] = "curr"></app-usd>
+  <app-usd *ngIf="type === 'JPY'" [APP_curr] = "curr"></app-usd>
+  <app-usd *ngIf="type === 'CAD'" [APP_curr] = "curr"></app-usd>
+  
+
+</body>
