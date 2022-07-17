@@ -19,11 +19,11 @@
   <h1>{{ans}}</h1>
   <p>ans via child component</p>
 
-  <app-usd *ngIf="type === 'USD'" [APP_curr] = "curr"></app-usd>
-  <app-usd *ngIf="type === 'ERO'" [APP_curr] = "curr"></app-usd>
-  <app-usd *ngIf="type === 'AUD'" [APP_curr] = "curr"></app-usd>
-  <app-usd *ngIf="type === 'JPY'" [APP_curr] = "curr"></app-usd>
-  <app-usd *ngIf="type === 'CAD'" [APP_curr] = "curr"></app-usd>
+  <app-usd *ngIf="type == 'USD'" [APP_curr] = "curr"></app-usd>
+  <app-ero *ngIf="type == 'ERO'" [APP_curr] = "curr"></app-ero>
+  <app-aud *ngIf="type == 'AUD'" [APP_curr] = "curr"></app-aud>
+  <app-jpy *ngIf="type == 'JPY'" [APP_curr] = "curr"></app-jpy>
+  <app-cad *ngIf="type == 'CAD'" [APP_curr] = "curr"></app-cad>
   
 
 </body>

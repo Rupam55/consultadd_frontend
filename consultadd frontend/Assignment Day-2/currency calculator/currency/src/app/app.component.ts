@@ -15,6 +15,7 @@ export class AppComponent {
     if(this.curr === ""){
       this.ans = "no value given";
     }else{
+      console.log(this.type);
       if(this.type === "USD"){
         this.ans = (parseFloat(this.curr)/79).toString(); 
       }else if(this.type === "ERO"){

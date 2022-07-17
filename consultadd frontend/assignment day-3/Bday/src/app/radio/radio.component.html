@@ -1,0 +1,12 @@
+<p>radio works!</p>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <p>select sorting parameter</p>
+    <input type="radio" id="default" name="option" value="default" formControlName="option" [(ngModel)]="myOp">
+    <label for="default">default</label><br>
+    <input type="radio" id="ID" name="option" value="ID" formControlName="option" [(ngModel)]="myOp">
+    <label for="ID">ID</label><br>  
+    <input type="radio" id="title" name="option" value="title" formControlName="option" [(ngModel)]="myOp">
+    <label for="title">title</label><br><br>
+    <button type="submit" >Submit</button>
+</form>
